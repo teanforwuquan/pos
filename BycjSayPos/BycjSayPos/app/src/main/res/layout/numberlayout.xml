@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  <LinearLayout
+  android:id="@+id/big_picture"
+  android:layout_marginTop="@dimen/back_gauge"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:padding="@dimen/back_gauge"
+  android:background="#ffff"
+  android:orientation="vertical"
+  >
+  <ImageView
+  android:id="@+id/bitmap"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:src="@drawable/bitmap"
+  />
+  <TextView
+  android:id="@+id/name"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="皇冠蛋糕"
+  android:textStyle="bold"
+  android:layout_gravity="center"
+  android:textColor="#4BA4FE"/>
+  <TextView
+  android:id="@+id/encoded"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="12348412384775"
+  />
+  <View
+  android:id="@+id/view_c"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/intensification"
+  android:background="#F2F2F2"/>
+  <RelativeLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  >
+  <TextView
+  android:id="@+id/price"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="￥18.88"
+  android:layout_centerVertical="true"
+  android:textColor="#FF4140"/>
+  <ImageView
+  android:id="@+id/shopping"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_alignParentRight="true"
+  android:src="@drawable/bitmap_a"/>
+  </RelativeLayout>
+  </LinearLayout>
+
+
+</LinearLayout>

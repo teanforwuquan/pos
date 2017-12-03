@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F0F0F0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <android.support.percent.PercentRelativeLayout
+    android:id="@+id/primary_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    app:layout_widthPercent = "12%"
+     android:orientation="vertical"
+       >
+     <ImageView
+     android:id="@+id/return_home"
+     android:layout_width="wrap_content"
+     android:layout_height="0dp"
+     app:layout_heightPercent = "10%"
+      android:paddingTop="5dp"
+      android:paddingBottom="5dp"
+     android:src="@drawable/homepos_a"
+     android:layout_centerHorizontal="true" />
+     <LinearLayout
+      android:id="@+id/cashier_desk"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_below="@id/return_home"
+      android:background="#4BA4FE"
+       android:gravity="center" >
+     <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/return_home"
+      android:layout_centerHorizontal="true"
+      android:src="@drawable/homepos_b"   />
+      <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="收银台"
+        android:textColor="#ffff"/>
+     </LinearLayout>
+   <LinearLayout
+       android:id="@+id/network_order"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_heightPercent = "15%"
+       android:layout_below="@id/cashier_desk"
+       android:gravity="center"
+       android:orientation="vertical">
+       <ImageView
+           android:id="@+id/imageView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/homepos_c" />
+       <TextView
+           android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+           android:text="网络订单"
+           android:textColor="#fff"/>
+   </LinearLayout>
+   <LinearLayout
+       android:id="@+id/sell"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_heightPercent = "15%"
+       android:layout_below="@id/network_order"
+       android:orientation="vertical"
+       android:gravity="center">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/homepos_d"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实时销售"
+        android:textColor="#ffff"/>
+   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sales_ranking"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "15%"
+        android:layout_below="@id/sell"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+     <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/homepos_e"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="销售排行"
+        android:textColor="#fff"/>
+    </LinearLayout>
+     <LinearLayout
+           android:id="@+id/cashier_summary"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           app:layout_heightPercent = "15%"
+           android:layout_below="@id/sales_ranking"
+           android:orientation="vertical"
+           android:gravity="center">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/homepos_f"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="收银汇总"
+               android:textColor="#ffff"/>
+       </LinearLayout>
+     <LinearLayout
+           android:id="@+id/home_view"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           app:layout_heightPercent = "15%"
+           android:layout_below="@id/cashier_summary"
+           android:orientation="vertical"
+           android:gravity="center">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/homepos_g"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="主页"
+               android:textColor="#ffff"/>
+       </LinearLayout>
+   </android.support.percent.PercentRelativeLayout>
+    <View
+     android:id="@+id/page_home"
+     android:layout_width="wrap_content"
+     android:layout_height="match_parent"
+     android:layout_toRightOf="@id/primary_menu"
+     app:layout_widthPercent = "1%"
+      />
+    <android.support.percent.PercentRelativeLayout
+    android:id="@+id/pos_home"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_widthPercent = "30%"
+    app:layout_heightPercent ="85%"
+    android:background="#FFFFFF"
+     android:layout_alignParentTop="true"
+     android:layout_toEndOf="@+id/page_home">
+    <RelativeLayout
+    android:id="@+id/inventory"
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     app:layout_heightPercent = "14%"
+     android:padding="@dimen/jap_pos"   >
+    <ImageView
+     android:layout_centerVertical="true"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     app:layout_widthPercent = "10%"
+     app:layout_heightPercent = "10%"
+     android:src="@drawable/pictures_a"
+        />
+     <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="商品清单"
+     android:textStyle="bold"
+     android:layout_centerVertical="true"
+     android:layout_centerHorizontal="true"/>
+    <ImageView
+     android:id="@+id/clean_up"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+     android:src="@drawable/picture_c"
+     android:layout_alignParentRight="true"
+        />
+     <ImageView
+     android:id="@+id/delete"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+     android:src="@drawable/picture_b"
+     android:layout_toLeftOf="@id/clean_up" />
+    </RelativeLayout>
+    <View
+     android:id="@+id/view_a"
+     android:layout_width="match_parent"
+     android:layout_height="@dimen/intensification"
+     android:background="#F3F3F3"
+     android:layout_below="@id/inventory"/>
+     <View
+      android:id="@+id/view_b"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_heightPercent = "2%"
+      android:layout_below="@id/view_a"
+         />
+      <ListView
+      android:id="@+id/shopping_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_heightPercent = "73%"
+      android:layout_below="@id/view_b">
+      </ListView>
+      <RelativeLayout
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_heightPercent = "10%"
+       app:layout_widthPercent = "94%"
+       android:layout_below="@id/shopping_list"
+       android:layout_marginLeft="@dimen/jap_pos"
+       android:background="#EEEEEE"   >
+       <ImageView
+       android:id="@+id/scan_code"
+       android:paddingLeft="@dimen/jap_pos"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/picture_f"
+        android:layout_centerVertical="true"
+           />
+         <EditText
+            android:id="@+id/edit_code"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_toRightOf="@id/scan_code"
+             android:hint="请您想要商品名称或者条形码"
+             android:background="@null"/>
+      </RelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+    <View
+        android:id="@+id/gap_home"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@id/pos_home"
+        app:layout_widthPercent = "1%"
+        app:layout_heightPercent = "85%"
+        />
+    <android.support.percent.PercentRelativeLayout
+     android:id="@+id/menu_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_toRightOf="@id/gap_home"
+     android:background="#ffff"
+     app:layout_heightPercent = "85%" >
+     <RelativeLayout
+      android:id="@+id/search"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_heightPercent = "12%"
+      android:padding="@dimen/back_gauge"
+      android:layout_marginTop="@dimen/back_gauge"
+      android:background="@drawable/homepos"
+     android:layout_marginLeft="@dimen/back_gauge"
+      android:layout_marginRight="@dimen/back_gauge">
+    <ImageView
+        android:id="@+id/search_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/back_gauge"
+        android:src="@drawable/shopping_a"
+        android:layout_centerVertical="true"/>
+     <EditText
+         android:id="@+id/edit_bar"
+         android:layout_toRightOf="@id/search_bar"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_marginLeft="@dimen/back_gauge"
+         android:text="请你想要的商品名称或者条形码"
+         android:background="@null"/>
+     </RelativeLayout>
+        <View
+            android:id="@+id/rattle"
+            android:layout_below="@id/search"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/back_gauge"
+            android:layout_height="@dimen/intensification"
+            android:background="#F3F3F3"
+            />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:scrollbars="none"
+            android:id="@+id/horizontalScrollView"
+            android:layout_below="@id/rattle"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu"
+                android:orientation="horizontal"></LinearLayout>
+
+        </HorizontalScrollView>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_below="@id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </android.support.percent.PercentRelativeLayout>
+    <View
+        android:id="@+id/view_d"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "2%"
+        android:layout_below="@+id/pos_home"
+        android:layout_toRightOf="@id/page_home"
+        />
+<RelativeLayout
+    android:id="@+id/gather"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_heightPercent = "11%"
+    android:layout_below="@+id/view_d"
+    android:layout_toRightOf="@id/page_home"
+    android:background="#ffff"
+    >
+    <TextView
+        android:id="@+id/amountto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="合计："
+        android:textSize="@dimen/textsize"
+        android:layout_centerVertical="true"/>
+       <EditText
+           android:id="@+id/ed_number"
+           android:layout_toRightOf="@id/amountto"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="0"
+           android:textColor="#F45C5A"
+           android:background="#ffff"
+           android:layout_centerVertical="true"
+           />
+        <ImageView
+            android:id="@+id/mypos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/number"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ha"/>
+        <ImageView
+            android:id="@+id/put_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/guadan"
+            android:layout_marginRight="@dimen/number"
+            android:layout_toLeftOf="@id/mypos"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dinggou"
+            android:layout_marginRight="@dimen/number"
+            android:layout_toLeftOf="@id/put_up"
+            android:layout_centerVertical="true"/>
+
+</RelativeLayout>
+</android.support.percent.PercentRelativeLayout>

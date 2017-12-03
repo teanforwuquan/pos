@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.bycjsaypos.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/return_shiftchang"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/colorLogin"
+        >
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="20dp"
+            android:background="@drawable/logoin"
+            />
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:hint="登录"/>
+        <ImageView
+            android:id="@+id/my_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_toLeftOf="@id/login"
+            android:layout_centerInParent="true"
+            android:src="@drawable/login"/>
+        <TextView
+            android:id="@+id/log_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/my_image"
+            android:textSize="16sp"
+            android:text="注销"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/space"
+        android:layout_below="@id/return_shiftchang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent = "5%"
+        />
+    <View
+        android:id="@+id/view_layout"
+        android:layout_below="@id/space"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent = "3%"
+        />
+    <ImageView
+        android:id="@+id/img_a"
+        android:layout_below="@id/space"
+        android:layout_toRightOf="@id/view_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent = "35%"
+        app:layout_heightPercent = "80%"
+        android:src="@drawable/host_pos"/>
+    <View
+        android:id="@+id/space_a"
+        android:layout_toRightOf="@id/img_a"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent = "6%"
+        />
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/re_layout"
+        android:layout_toRightOf="@id/space_a"
+        android:layout_below="@id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent = "25%"
+        app:layout_heightPercent = "80%"
+        >
+    <ImageView
+        android:id="@+id/img_b"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "50%"
+        android:src="@drawable/host_stock"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/img_f" />
+        <View
+        android:id="@+id/space_c"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img_b"
+        app:layout_heightPercent = "2%"
+        />
+        <ImageView
+            android:id="@+id/img_d"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_heightPercent = "23%"
+            app:layout_widthPercent = "49%"
+            android:src="@drawable/host_commodity"
+            android:layout_below="@+id/space_c"
+            android:layout_alignParentStart="true" />
+        <View
+            android:id="@+id/space_d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/img_d"
+            app:layout_heightPercent = "2%"
+            />
+        <ImageView
+        android:id="@+id/img_e"
+        android:layout_below="@id/space_d"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "23%"
+        app:layout_widthPercent = "49%"
+        android:src="@drawable/host_mumber"/>
+        <View
+            android:id="@+id/space_f"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_d"
+            android:layout_below="@id/space_c"
+            app:layout_widthPercent = "2%"
+            />
+        <ImageView
+        android:id="@+id/img_f"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "52%"
+        app:layout_widthPercent = "40%"
+        android:src="@drawable/host_shopping"
+        android:layout_toRightOf="@id/img_d"
+        android:layout_below="@id/space_c"/>
+    </android.support.percent.PercentRelativeLayout>
+    <View
+        android:id="@+id/space_b"
+        android:layout_toRightOf="@id/re_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent = "2%"
+        />
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/r_layout"
+        android:layout_toRightOf="@id/space_b"
+        android:layout_below="@id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent = "25%"
+        app:layout_heightPercent = "80%"
+        >
+        <ImageView
+        android:id="@+id/img_h"
+        android:layout_width="wrap_content"
+          android:layout_height="0dp"
+        app:layout_heightPercent = "50%"
+         app:layout_widthPercent = "45%"
+        android:src="@drawable/host_orderforgoods"
+        />
+        <!--<View-->
+            <!--android:id="@+id/space_h"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_toRightOf="@id/img_h"-->
+            <!--app:layout_widthtPercent = "2%"-->
+            <!--/>-->
+        <ImageView
+            android:id="@+id/img_g"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_heightPercent = "24%"
+            app:layout_widthPercent = "50%"
+            android:src="@drawable/host_suplier"
+            android:layout_toEndOf="@+id/img_h" />
+
+        <View
+            android:id="@+id/space_n"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_heightPercent = "2%"
+            android:layout_below="@id/img_g"
+            />
+        <ImageView
+            android:id="@+id/img_j"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_heightPercent = "24%"
+            app:layout_widthPercent = "50%"
+            android:src="@drawable/host_seller"
+            android:layout_toRightOf="@id/img_h"
+            android:layout_below="@+id/space_n"
+            />
+        <View
+            android:id="@+id/space_w"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_heightPercent = "2%"
+            android:layout_below="@id/img_h"
+            />
+            <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="0dp"
+              app:layout_widthPercent = "92%"
+              app:layout_heightPercent = "48%"
+             android:src="@drawable/host_system"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>
